@@ -18,6 +18,18 @@ namespace ToDoList
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Todolists", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Admin",
+                url: "{controller}/{action}",
+                defaults: new { controller = "Admin", action = "Index" }
+            );
+
+            routes.MapRoute(
+                name: "Login",
+                url: "{controller}/{action}",
+                defaults: new { controller = "Login", action = "Index" }
+            );
         }
     }
 }

@@ -1,0 +1,22 @@
+﻿@model ToDoList.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "管理画面";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+    <h2>管理画面</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+</table>
+
+<div>
+    @Html.ActionLink("一覧表示に戻る", "Home")
+</div>

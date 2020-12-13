@@ -10,6 +10,7 @@ using ToDoList.Models;
 
 namespace ToDoList.Controllers
 {
+    [Authorize]
     public class TodolistsController : Controller
     {
         private TodolistsContext db = new TodolistsContext();
@@ -113,6 +114,16 @@ namespace ToDoList.Controllers
             db.Todolists.Remove(todolist);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Admin()
+        {
+            return RedirectToAction("Index", "Admin");
+        }
+
+        public ActionResult SignOut()
+        {
+            return RedirectToAction("SignOut", "Login");
         }
 
         protected override void Dispose(bool disposing)
