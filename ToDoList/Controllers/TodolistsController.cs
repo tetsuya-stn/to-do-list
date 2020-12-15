@@ -15,6 +15,11 @@ namespace ToDoList.Controllers
     {
         private TodolistsContext db = new TodolistsContext();
 
+        public virtual ActionResult List()
+        {
+            throw new NotImplementedException();
+        }
+
         // GET: Todolists
         public ActionResult Index()
         {
