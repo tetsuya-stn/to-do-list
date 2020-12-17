@@ -31,6 +31,6 @@ namespace ToDoList.Models
 
 	public class TodolistsContext: DbContext
 	{
-		public DbSet<Todolist> Todolists { get; set; }
+		public virtual DbSet<Todolist> Todolists { get; set; }
 	}
 }
